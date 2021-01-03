@@ -1,10 +1,27 @@
 import React from 'react'
+import {createGlobalStyle} from 'styled-components'
+import TodoTemplate from './Components/TodoTemplate'
+import TodoHead from './Components/TodoHead'
+import TodoList from './Components/TodoList'
+import TodoCreate from './Components/TodoCreate'
+
+const GlobalStyle = createGlobalStyle`
+  body{
+    background: #e9ecef;
+  }
+`
+
 
 const App = () => {
   return (
-    <div>
-      ㅎㅇ
-    </div>
+    <>
+    <GlobalStyle/>
+    <TodoTemplate>
+      <TodoHead/>
+      <TodoList />
+      <TodoCreate />
+    </TodoTemplate>
+    </>
   )
 }
 
